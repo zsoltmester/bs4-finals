@@ -7,3 +7,4 @@ Ide gyűjthetjük ami eszünkbe jut, hogy megcsinálhatnánk még a döntő elő
 * Permission handling?
 * Az alkalmazás váza pár activity-vel, esteleg navigációs frameworkel.
 * A materialos design behúzása.
+* Egyszerű logger, ami megszabadít mindket a TAG-tól. Mondjuk valami közös ősosztályba is tehetjük.
