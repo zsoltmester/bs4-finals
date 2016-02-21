@@ -1,4 +1,4 @@
-package hu.beesmarter.finalapp.finalapp;
+package hu.beesmarter.finalapp;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

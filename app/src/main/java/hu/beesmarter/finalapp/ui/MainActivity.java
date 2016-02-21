@@ -1,4 +1,4 @@
-package hu.beesmarter.finalapp.finalapp.ui;
+package hu.beesmarter.finalapp.ui;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -13,8 +13,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
-import hu.beesmarter.finalapp.finalapp.R;
-import hu.beesmarter.finalapp.finalapp.utils.NavigationUtils;
+import hu.beesmarter.finalapp.R;
+import hu.beesmarter.finalapp.utils.NavigationUtils;
 
 public class MainActivity extends AppCompatActivity
 		implements NavigationView.OnNavigationItemSelectedListener {

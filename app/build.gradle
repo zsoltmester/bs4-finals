@@ -5,8 +5,8 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "hu.beesmarter.finalapp.finalapp"
-        minSdkVersion 22
+        applicationId "hu.beesmarter.finalapp"
+        minSdkVersion 21
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
