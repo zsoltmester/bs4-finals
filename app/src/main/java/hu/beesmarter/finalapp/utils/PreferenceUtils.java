@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package hu.beesmarter.finalapp.finalapp.utils;
+package hu.beesmarter.finalapp.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

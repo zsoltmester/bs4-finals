@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="hu.beesmarter.finalapp.finalapp"
+<manifest package="hu.beesmarter.finalapp"
 		  xmlns:android="http://schemas.android.com/apk/res/android">
 
 	<application
