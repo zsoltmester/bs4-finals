@@ -1,5 +1,6 @@
 package hu.beesmarter.finalapp.ui;
 
+import hu.beesmarter.finalapp.R;
 import hu.bsmart.framework.navigation.Screen;
 import hu.bsmart.framework.ui.activity.FrameworkActivity;
 
@@ -7,12 +8,6 @@ import hu.bsmart.framework.ui.activity.FrameworkActivity;
  * The main activity of the application. This can be launched from a launcher.
  */
 public class MainActivity extends FrameworkActivity {
-
-	@Override
-	protected void onResume() {
-		super.onResume();
-		logger.d("It works!");
-	}
 
 	@Override
 	protected Screen getHomeScreen() {
@@ -33,6 +28,18 @@ public class MainActivity extends FrameworkActivity {
 	@Override
 	protected void onGcmTokenAvailable(String gcmToken) {
 		// Nothing to do here. We do not need GCM.
+	}
+
+	@Override
+	protected void onDrawerItemClicked(final int id) {
+		logger.d("onDrawerItemClicked: " + id);
+		switch (id) {
+			case R.id.options:
+				if (getActualScreen() != Screens.OPTIONS) {
+					goToScreen(Screens.OPTIONS);
+				}
+				break;
+		}
 	}
 
 	@Override

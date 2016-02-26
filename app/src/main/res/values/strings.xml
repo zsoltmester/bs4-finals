@@ -3,4 +3,5 @@
 	<string name="team_name">BSmart</string>
 
 	<string name="home_fragment_title">Home</string>
+	<string name="options_fragment_title">Options</string>
 </resources>

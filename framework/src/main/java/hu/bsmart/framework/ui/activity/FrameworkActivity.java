@@ -8,11 +8,15 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.location.Location;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentManager.BackStackEntry;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -44,7 +48,7 @@ import hu.bsmart.framework.util.PermissionUtil;
 
 public abstract class FrameworkActivity extends AppCompatActivity implements ScreenNavigator,
 		NfcResultHandler, LocationListener, RequestStateListener, AlertDialogFragment.OkClickListener,
-		GcmRegistrationListener, PushMessageListener {
+		GcmRegistrationListener, PushMessageListener, NavigationView.OnNavigationItemSelectedListener {
 
 	private static final String SCREEN_FRAGMENT_TAG = "SCREEN_FRAGMENT";
 	private static final String GCM_PROGRESS_DIALOG_FRAGMENT_TAG = "GCM_PROGRESS_DIALOG_FRAGMENT_TAG";
@@ -109,6 +113,11 @@ public abstract class FrameworkActivity extends AppCompatActivity implements Scr
 		toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 
+		initializeActionBarToggle();
+
+		NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+		navigationView.setNavigationItemSelectedListener(this);
+
 		pauseHandler = new PauseHandler();
 
 		waitMessage = getString(R.string.wait_dialog_message);
@@ -134,6 +143,14 @@ public abstract class FrameworkActivity extends AppCompatActivity implements Scr
 
 	protected GoogleApiClient getApiClient() {
 		return googleApiClientDelegate.getClient();
+	}
+
+	private void initializeActionBarToggle() {
+		DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+		ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+				this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+		drawer.setDrawerListener(toggle);
+		toggle.syncState();
 	}
 
 	@Override
@@ -337,11 +354,16 @@ public abstract class FrameworkActivity extends AppCompatActivity implements Scr
 
 	@Override
 	public void onBackPressed() {
-		super.onBackPressed();
-		if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
-			finish();
+		DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+		if (drawer.isDrawerOpen(GravityCompat.START)) {
+			drawer.closeDrawer(GravityCompat.START);
 		} else {
-			updateScreenData();
+			super.onBackPressed();
+			if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
+				finish();
+			} else {
+				updateScreenData();
+			}
 		}
 	}
 
@@ -591,6 +613,7 @@ public abstract class FrameworkActivity extends AppCompatActivity implements Scr
 			}
 			getSupportActionBar()
 					.setDisplayHomeAsUpEnabled(screen != getHomeScreen() && screen.canNavigateUpFromHere());
+			initializeActionBarToggle();
 		} else {
 			getSupportActionBar().hide();
 		}
@@ -683,6 +706,16 @@ public abstract class FrameworkActivity extends AppCompatActivity implements Scr
 	protected boolean arePlayServicesOk() {
 		return playServicesOk;
 	}
+
+	@Override
+	public boolean onNavigationItemSelected(final MenuItem item) {
+		onDrawerItemClicked(item.getItemId());
+		DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+		drawer.closeDrawer(GravityCompat.START);
+		return true;
+	}
+
+	protected abstract void onDrawerItemClicked(int id);
 
 	/**
 	 * Internal screen navigator that is used by the Activity.

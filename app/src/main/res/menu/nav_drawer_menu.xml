@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-	<group android:checkableBehavior="single">
+	<group android:checkableBehavior="all">
 		<item
-			android:id="@+id/fragmentA"
-			android:icon="@drawable/ic_menu_manage"
-			android:title="FragmentA" />
-
-		<item
-			android:id="@+id/fragmentB"
-			android:icon="@drawable/ic_menu_manage"
-			android:title="FragmentB" />
+			android:id="@+id/options"
+			android:title="@string/options_fragment_title" />
 	</group>
-
-
 </menu>

@@ -10,5 +10,5 @@
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="@string/home_fragment_title" />
+		android:text="@string/options_fragment_title" />
 </FrameLayout>

@@ -14,6 +14,13 @@ public enum Screens implements Screen {
 		public int getActionBarTitleResource() {
 			return R.string.home_fragment_title;
 		}
+	},
+
+	OPTIONS(OptionsFragment.class, R.layout.fragment_options) {
+		@Override
+		public int getActionBarTitleResource() {
+			return R.string.options_fragment_title;
+		}
 	},;
 
 	private Class<? extends FrameworkFragment> controllerFragmentClass;
