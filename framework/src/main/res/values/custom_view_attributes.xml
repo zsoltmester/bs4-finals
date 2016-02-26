@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Style attributes for RotatingArrow -->
+	<declare-styleable name="RotatingArrow">
+		<!-- Initial degree -->
+		<attr name="initialDegree" format="float" />
+		<!-- Ratio of the length relative to the smaller dimension -->
+		<attr name="lengthRatio" format="float" />
+		<!-- Ratio of the thickness relative to the smaller dimension -->
+		<attr name="thicknessRatio" format="float" />
+		<!-- Color of the arrow -->
+		<attr name="arrowColor" format="color|reference" />
+		<!-- Should the arrow be animated by default -->
+		<attr name="animateByDefault" format="boolean" />
+		<!-- Animation duration in milliseconds -->
+		<attr name="animationDuration" format="integer" />
+	</declare-styleable>
+
+	<!-- Style attributes for AdjustableCircle -->
+	<declare-styleable name="AdjustableCircle">
+		<!-- Ratio of circle's diameter relative to the smaller dimension -->
+		<attr name="circleRatio" format="float" />
+		<!-- Color of the circle -->
+		<attr name="circleColor" format="color|reference" />
+	</declare-styleable>
+</resources>

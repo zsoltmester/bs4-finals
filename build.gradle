@@ -18,6 +18,15 @@ allprojects {
     }
 }
 
+subprojects {
+    ext.target_sdk = 23
+    ext.build_tools = "23.0.2"
+
+    ext.min_sdk = 14
+    ext.version_code = 1
+    ext.version_name = "1.0"
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

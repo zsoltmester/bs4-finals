@@ -1,0 +1,74 @@
+<resources>
+	<string name="wait_dialog_message">Egy pillanat&#8230;</string>
+
+	<!-- Google Play Services error dialog -->
+	<string name="google_play_services_error_title">HIBA</string>
+    <string name="google_play_services_error_message">
+        A készüléken nem található megfelelő verzió a Google Play
+        Game Services-ből. Ez azt jelenti, hogy bizonyos szolgáltatások
+        nem fognak működni.
+    </string>
+
+	<!-- Permission error dialog -->
+	<string name="permission_error_title">HIBA</string>
+    <string name="permission_error_message">
+        Az alkalmazásnak szüksége van minden engedélyre, amit elkért,
+        különben nem képes megfelelően működni! Kérlek, engedélyezz
+        mindent a beállításokban!
+    </string>
+
+	<!-- GCM error dialog -->
+	<string name="gcm_registration_error_title">HIBA</string>
+    <string name="gcm_registration_error_message">
+        Nem sikerült a GCM szolgáltatás regisztrálása a szervernél! Ez
+        azt jelenti, hogy a szerver nem fog tudni üzenetet küldeni ennek
+        a mobil eszköznek.
+    </string>
+
+	<!-- Push message strings -->
+	<string name="push_notification_error_title">Push üzenet hiba!</string>
+	<string name="push_message_error_title">PUSH ÜZENET HIBA</string>
+
+	<string name="game_started_push_message_summary">Játékmenet elindult</string>
+	<string name="game_started_push_message_details">A(z) %1$s csapat elkezdte a következő játékmenetet: %2$s</string>
+
+	<string name="game_ended_push_message_summary">Játékmenet vége</string>
+	<string name="game_ended_push_message_details">A(z) %1$s csapat befejezte a következő játékmenetet: %2$s</string>
+
+	<string name="task_done_push_message_summary">Feladat vége</string>
+	<string name="task_done_push_message_basic_details">A(z) %1$s csapat befejezte a(z) %2$s nevű feladatot a következő játékban: %3$s.</string>
+	<string name="task_done_push_message_score_details">A megoldás %1$d pontot ért, a csapat eddig összesen %2$d pontot gyűjtött.</string>
+	<string name="task_done_push_message_comment_details">A megoldásra kapott megjegyzés: %1$s.</string>
+
+	<string name="task_start_push_message_summary">Feladat kezdődött</string>
+	<string name="task_start_push_message_details">A(z) %1$s csapat elkezdte a(z) %2$s nevű feladatot a következő játékban: %3$s.</string>
+
+	<string name="task_revoked_push_message_summary">Feladat visszavonva</string>
+	<string name="task_revoked_push_message_single_details">Egy feladat vissza lett vonva a következő indoklással: %1$s.</string>
+	<string name="task_revoked_push_message_multi_details">Több feladat is vissza lett vonva a következő indoklással: %1$s.</string>
+
+	<!-- Geofence strings -->
+	<string name="geofence_not_available">A geofence funkció nem elérhető!</string>
+	<string name="too_many_geofences">Túl sok geofence!</string>
+	<string name="too_many_pending_intents">Túl sok PendingIntent!</string>
+	<string name="geofence_unknown_error">Ismeretlen hiba történt!</string>
+	<string name="transition_enter">BELÉPÉS</string>
+	<string name="transition_exit">KILÉPÉS</string>
+	<string name="transition_unknown">ISMERETLEN TRANZÍCIÓ</string>
+
+	<!-- Alert dialog -->
+	<string name="alert_dialog_ok_button">OK</string>
+
+	<!-- Confirmation dialog -->
+	<string name="confirmation_dialog_title">Biztos?</string>
+	<string name="confirmation_dialog_yes_button">IGEN</string>
+	<string name="confirmation_dialog_no_button">NEM</string>
+
+	<!-- Input dialog -->
+	<string name="input_dialog_ok_button">OK</string>
+	<string name="input_dialog_cancel_button">MÉGSE</string>
+
+	<!-- Menu -->
+	<string name="refresh_menu_item_title">Frissítés</string>
+
+</resources>

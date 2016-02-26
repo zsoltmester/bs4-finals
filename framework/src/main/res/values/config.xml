@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="gcm_sender_id" translatable="false">FILL_IF_WE_NEED_GCM</string>
+</resources>
