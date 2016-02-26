@@ -1,10 +1,18 @@
 <resources>
-
 	<!-- Main application theme. -->
 	<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 		<item name="colorPrimary">@color/colorPrimary</item>
 		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
 		<item name="colorAccent">@color/colorAccent</item>
+
+		<item name="appBarTheme">@style/AppTheme.AppBarOverlay</item>
+		<item name="toolbarTheme">@style/AppTheme.PopupOverlay</item>
+
+		<item name="navigationDrawerHeader">@layout/nav_drawer_header</item>
+		<item name="navigationDrawerMenu">@menu/nav_drawer_menu</item>
 	</style>
 
+	<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+	<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+	<attr name="appBarTheme" format="reference" />
+	<attr name="toolbarTheme" format="reference" />
+
+	<attr name="navigationDrawerHeader" format="reference" />
+	<attr name="navigationDrawerMenu" format="reference" />
+
 	<attr name="dividerStartPadding" format="dimension" />
 	<attr name="dividerEndPadding" format="dimension" />
 </resources>
