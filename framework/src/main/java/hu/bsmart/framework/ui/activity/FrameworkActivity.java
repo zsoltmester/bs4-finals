@@ -35,8 +35,8 @@ import hu.bsmart.framework.logging.LoggerProvider;
 import hu.bsmart.framework.navigation.Screen;
 import hu.bsmart.framework.navigation.ScreenManager;
 import hu.bsmart.framework.navigation.ScreenNavigator;
-import hu.bsmart.framework.ui.activity.WorkerFragment.RequestStateListener;
 import hu.bsmart.framework.ui.activity.NdefReaderTask.NfcResultHandler;
+import hu.bsmart.framework.ui.activity.WorkerFragment.RequestStateListener;
 import hu.bsmart.framework.ui.fragment.FrameworkFragment;
 import hu.bsmart.framework.ui.fragment.dialog.AlertDialogFragment;
 import hu.bsmart.framework.ui.fragment.dialog.ProgressDialogFragment;
@@ -56,7 +56,7 @@ public abstract class FrameworkActivity extends AppCompatActivity implements Scr
 
 	private Toolbar toolbar;
 
-	private Logger logger;
+	protected Logger logger;
 	private PauseHandler pauseHandler;
 	private InternalNavigator internalNavigator = new InternalNavigator();
 	private String waitMessage;
@@ -113,7 +113,8 @@ public abstract class FrameworkActivity extends AppCompatActivity implements Scr
 
 		waitMessage = getString(R.string.wait_dialog_message);
 
-		nfcDelegate = new NfcDelegate(this);
+		// TODO it should be have a configuration to disable nfc
+		//nfcDelegate = new NfcDelegate(this);
 
 		playServicesOk = GooglePlayServicesUtil.checkPlayServices(this);
 		if (playServicesOk) {
@@ -152,7 +153,8 @@ public abstract class FrameworkActivity extends AppCompatActivity implements Scr
 		super.onResume();
 		pauseHandler.resume();
 		playServicesOk = GooglePlayServicesUtil.checkPlayServices(this);
-		nfcDelegate.startTrackingNfc();
+		// TODO it cause a crash
+		//nfcDelegate.startTrackingNfc();
 		if (getActualScreen() != null && getActualScreen().needsLocation()) {
 			googleApiClientDelegate.startTrackingLocation();
 		}
@@ -169,7 +171,8 @@ public abstract class FrameworkActivity extends AppCompatActivity implements Scr
 		super.onPause();
 		pauseHandler.pause();
 		setupGeofenceIfNeeded();
-		nfcDelegate.stopTrackingNfc();
+		// TODO it cause a crash
+		//nfcDelegate.stopTrackingNfc();
 		if (getActualScreen() != null && getActualScreen().needsLocation()) {
 			googleApiClientDelegate.stopTrackingLocation();
 		}

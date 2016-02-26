@@ -5,12 +5,12 @@
 		<item
 			android:id="@+id/fragmentA"
 			android:icon="@drawable/ic_menu_manage"
-			android:title="FragmentA"/>
+			android:title="FragmentA" />
 
 		<item
 			android:id="@+id/fragmentB"
 			android:icon="@drawable/ic_menu_manage"
-			android:title="FragmentB"/>
+			android:title="FragmentB" />
 	</group>
 
 
