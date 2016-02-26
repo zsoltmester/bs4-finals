@@ -23,3 +23,5 @@ VASÁRNAP (február 28.)
 * kb. 12:30-13:00	A "Programozz környezettudatosan!" verseny díjátadója
 * kb. 13:00	    A BeeSmarter verseny ünnepélyes eredményhirdetése, díjátadó, beszédek
 * kb. 13:30	    Ünnepélyes állófogadás (ebéd)
+
+TEST commit for Tomi
