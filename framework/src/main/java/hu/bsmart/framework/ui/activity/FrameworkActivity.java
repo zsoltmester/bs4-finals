@@ -35,7 +35,7 @@ import hu.bsmart.framework.logging.LoggerProvider;
 import hu.bsmart.framework.navigation.Screen;
 import hu.bsmart.framework.navigation.ScreenManager;
 import hu.bsmart.framework.navigation.ScreenNavigator;
-import hu.bsmart.framework.ui.activity.DigitAdventureWorkerFragment.RequestStateListener;
+import hu.bsmart.framework.ui.activity.WorkerFragment.RequestStateListener;
 import hu.bsmart.framework.ui.activity.NdefReaderTask.NfcResultHandler;
 import hu.bsmart.framework.ui.fragment.FrameworkFragment;
 import hu.bsmart.framework.ui.fragment.dialog.AlertDialogFragment;
@@ -100,7 +100,7 @@ public abstract class FrameworkActivity extends AppCompatActivity implements Scr
 		Fragment workerFragment = getSupportFragmentManager().findFragmentByTag(WORKER_FRAGMENT_TAG);
 
 		if (workerFragment == null) {
-			workerFragment = DigitAdventureWorkerFragment.newInstance();
+			workerFragment = WorkerFragment.newInstance();
 			workerFragment.setRetainInstance(true);
 			getSupportFragmentManager().beginTransaction().add(workerFragment, WORKER_FRAGMENT_TAG).commit();
 		}
@@ -478,7 +478,7 @@ public abstract class FrameworkActivity extends AppCompatActivity implements Scr
 		return screenFragment == null ? null : ScreenManager.getInstance().getScreenForFragment(screenFragment);
 	}
 
-	private DigitAdventureWorkerFragment getWorkerFragment() {
+	private WorkerFragment getWorkerFragment() {
 		FragmentManager fm = getSupportFragmentManager();
 		if (fm == null) {
 			return null;
@@ -489,7 +489,7 @@ public abstract class FrameworkActivity extends AppCompatActivity implements Scr
 			throw new IllegalStateException("Worker fragment is missing!");
 		}
 
-		return (DigitAdventureWorkerFragment) worker;
+		return (WorkerFragment) worker;
 	}
 
 	/**

@@ -14,7 +14,7 @@ import hu.bsmart.framework.handler.PauseHandler;
 import hu.bsmart.framework.logging.Logger;
 import hu.bsmart.framework.logging.LoggerProvider;
 
-public class DigitAdventureWorkerFragment extends Fragment {
+public class WorkerFragment extends Fragment {
 
 	public interface RequestStateListener {
 		void onRequestStarted(String requestCode, NetworkRequest request);
@@ -102,7 +102,7 @@ public class DigitAdventureWorkerFragment extends Fragment {
 		}
 	}
 
-	public DigitAdventureWorkerFragment() {
+	public WorkerFragment() {
 	}
 
 	/**
@@ -111,7 +111,7 @@ public class DigitAdventureWorkerFragment extends Fragment {
 	 * @return the Fragment instance
 	 */
 	public static Fragment newInstance() {
-		DigitAdventureWorkerFragment result = new DigitAdventureWorkerFragment();
+		WorkerFragment result = new WorkerFragment();
 		return result;
 	}
 
