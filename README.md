@@ -2,9 +2,7 @@
 The repository of the BSmart team for the finals at the fourth BeeSmarter.
 
 ## TODO
-Ide gyűjthetjük ami eszünkbe jut, hogy megcsinálhatnánk még a döntő előtt.
-* Permission handling?
-* Egyszerű logger, ami megszabadít mindket a TAG-tól. Mondjuk valami közös ősosztályba is tehetjük.
+-
 
 ## Amiket vinni kell
 [Amit kapunk: "A döntő résztvevői számára villamos áramot (1 db konnektort (CEE 7/4 230V~50Hz) és 4A áramfelvételt garantálunk csapatonként), a beadó felülethez szükséges hálózati végpontot (1 db RJ45, Cat5e csatlakozó), széket, asztalt biztosítunk. A behozott eszközökről listát kérünk, melynek formája letölthető lesz a döntő hetében a döntős csapatok számára."]
