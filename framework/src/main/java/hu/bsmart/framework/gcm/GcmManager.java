@@ -94,8 +94,8 @@ public class GcmManager {
     private static final String GCM_PREFERENCES = "GCM_PREFERENCES";
     private static final String GCM_TOKEN_PREFERENCE_KEY = "GCM_TOKEN_PREFERENCE_KEY";
 
-    private static final int GCM_NOTIFICATION_ID =
-	   private static final int GCM_PENDING_INTENT_REQUEST_CODE = 99;
+    private static final int GCM_NOTIFICATION_ID = 88;
+    private static final int GCM_PENDING_INTENT_REQUEST_CODE = 99;
 
     private static SharedPreferences gcmPreferences;
 
