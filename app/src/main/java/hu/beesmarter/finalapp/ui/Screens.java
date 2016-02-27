@@ -58,7 +58,6 @@ public enum Screens implements Screen {
 
 	@Override
 	public boolean isRefreshable() {
-		// TODO what is this?
 		return false;
 	}
 
@@ -79,14 +78,14 @@ public enum Screens implements Screen {
 
 	@Override
 	public int getFadeInAnimation() {
-		// TODO should add an animation
-		return 0;
+		// TODO should add a better animation
+		return hu.bsmart.framework.R.anim.abc_fade_in;
 	}
 
 	@Override
 	public int getFadeOutAnimation() {
-		// TODO should add an animation
-		return 0;
+		// TODO should add a better animation
+		return hu.bsmart.framework.R.anim.abc_fade_out;
 	}
 
 	@Override
