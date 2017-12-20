@@ -2,7 +2,6 @@
 The repository of the BSmart team for the finals at the fourth BeeSmarter.
 
 ## TODO
--
 
 ## Amiket vinni kell
 [Amit kapunk: "A döntő résztvevői számára villamos áramot (1 db konnektort (CEE 7/4 230V~50Hz) és 4A áramfelvételt garantálunk csapatonként), a beadó felülethez szükséges hálózati végpontot (1 db RJ45, Cat5e csatlakozó), széket, asztalt biztosítunk. A behozott eszközökről listát kérünk, melynek formája letölthető lesz a döntő hetében a döntős csapatok számára."]
@@ -23,5 +22,3 @@ VASÁRNAP (február 28.)
 * kb. 12:30-13:00	A "Programozz környezettudatosan!" verseny díjátadója
 * kb. 13:00	    A BeeSmarter verseny ünnepélyes eredményhirdetése, díjátadó, beszédek
 * kb. 13:30	    Ünnepélyes állófogadás (ebéd)
-
-TEST commit for Tomi
